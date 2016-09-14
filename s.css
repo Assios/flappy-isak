@@ -1,0 +1,26 @@
+html {
+  background: url("isak.jpg") no-repeat center;
+  background-size: cover;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#c {
+   color: #e4df01;
+   font-weight: bold;
+   font-size: 100;
+   font-family: "Arial";
+}
+
+#d {
+   color: #e4df01;
+   font-weight: bold;
+   font-size: 30;
+   font-family: "Arial";
+}
