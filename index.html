@@ -1,51 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="s.css" rel="stylesheet">
-<script>
-
-    countdown('09/14/2016 10:03 AM', 'c');
-
-    function countdown(dt, id) {
-        var end = new Date(dt);
-
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-        var timer;
-
-        function showRemaining() {
-            var now = new Date();
-            var distance = end - now;
-            if (distance < 0) {
-
-                clearInterval(timer);
-                document.getElementById(id).innerHTML = 'MANDAG 20:00';
-
-                return;
-            }
-            var days = Math.floor(distance / _day);
-            var hours = Math.floor((distance % _day) / _hour);
-            var minutes = Math.floor((distance % _hour) / _minute);
-            var seconds = Math.floor((distance % _minute) / _second);
-	if (Math.random() > 0.022) {
-            document.getElementById(id).innerHTML = days + ":"
-            document.getElementById(id).innerHTML += hours + ':';
-            document.getElementById(id).innerHTML += minutes + ':';
-            document.getElementById(id).innerHTML += seconds + "";
-} else {
-            document.getElementById(id).innerHTML = days + "???"
-            document.getElementById(id).innerHTML += hours + '--9-';
-            document.getElementById(id).innerHTML += minutes + ',H,,I,N,T,';
-            document.getElementById(id).innerHTML += seconds + "-Vu--w.w.w..->com";
- }        
-}
-
-        timer = setInterval(showRemaining, 1000);
-    }
-
-</script>
 <html>
 <div id="c">er du klar?</div>
 <div id="d">Spill <a href="http://flappynoora.no" target="_blank">Flappynoora</a> mens du venter!</div>
+<script>
+    document.getElementById("c").innerHTML = ["MANDAG 20:00", "#mandagklokkenåtte"][Math.floor(Math.random() * 2)];
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,7 +14,5 @@
 
   ga('create', 'UA-82643027-1', 'auto');
   ga('send', 'pageview');
-
 </script>
-
 </html>
