@@ -118,17 +118,21 @@ var play = {
 
         if (this.score > 9 && this.score < 21) {
             this.player.body.position.y += Math.cos(Date.now()) * (7);
-            this.backgroundTint(487);
+            this.playerTint(487);
+        }
+
+        if (this.score > 21 && this.score < 23) {
+            this.player.tint = 0xffffff;
         }
 
         if (this.score > 30 && this.score < 41) {
             this.player.body.position.y += Math.cos(Date.now()) * (7);
-            this.backgroundTint(487);
+            this.playerTint(487);
         }
 
         if (this.score > 60) {
             this.player.body.position.y += Math.cos(Date.now()) * (7);
-            this.backgroundTint(243);
+            this.playerTint(243);
         }
 
       if (this.sky.x < -2048) {
@@ -208,15 +212,19 @@ var play = {
         this.obstacle2.body.setSize(169, 581, 50, 40);
         var random = Math.floor(Math.random() * 400) - 200;
         this.obstacle.reset(W, -275 + random);
-        this.obstacle2.reset(W, 550 + random);
+        this.obstacle2.reset(W, 575 + random);
         this.obstacle.body.velocity.x = -250;
         this.obstacle2.body.velocity.x = -250;
 
         if (this.score > 21 && this.score < 30) {
+            this.obstacle.tint = 0xff00000;
+            this.obstacle2.tint = 0x0000ff;
             this.slide(40);
         }
 
         if (this.score > 41 && this.score < 60) {
+            this.obstacle.tint = 0xab238c;
+            this.obstacle2.tint = 0x42bbff;
             this.slide(80);
         }
 
@@ -287,11 +295,10 @@ var play = {
                 break;
         }
     },
-    backgroundTint: function(frequency) {
+    playerTint: function(frequency) {
         if (game.time.now > this.colortime) {
             var c = Math.random() * 0xffffff;
-            this.sky.tint = c;
-            this.skymirror.tint = c;
+            this.player.tint = c;
             this.colortime = game.time.now + frequency;
         }
     },
