@@ -128,6 +128,8 @@ var play = {
         if (this.score > 30 && this.score < 41) {
             this.player.body.position.y += Math.cos(Date.now()) * 7;
             this.playerTint(487);
+            this.obstacle.tint = 0xffffff;
+            this.obstacle2.tint = 0xffffff;
         }
 
         if (this.score > 41 && this.score < 43) {
