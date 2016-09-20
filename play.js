@@ -117,7 +117,7 @@ var play = {
         game.physics.arcade.collide(this.player, this.william2, 0, this.restart, this);
 
         if (this.score > 9 && this.score < 21) {
-            this.player.body.position.y += Math.cos(Date.now()) * (7);
+            this.player.body.position.y += Math.cos(Date.now()) * 7;
             this.playerTint(487);
         }
 
@@ -126,12 +126,16 @@ var play = {
         }
 
         if (this.score > 30 && this.score < 41) {
-            this.player.body.position.y += Math.cos(Date.now()) * (7);
+            this.player.body.position.y += Math.cos(Date.now()) * 7;
             this.playerTint(487);
         }
 
+        if (this.score > 41 && this.score < 43) {
+            this.player.tint = 0xffffff;
+        }
+
         if (this.score > 60) {
-            this.player.body.position.y += Math.cos(Date.now()) * (7);
+            this.player.body.position.y += Math.cos(Date.now()) * 7;
             this.playerTint(243);
         }
 
