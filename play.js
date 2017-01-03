@@ -34,9 +34,9 @@ var play = {
         this.player.anchor.setTo(0.5, 0.5);
         this.score = 0;
 
-        this.dick = this.game.add.audio("dick");
-        this.dick.loop = true;
-        this.dick.volume = 0.3;
+        this.frokner = this.game.add.audio("frokner");
+        this.frokner.loop = true;
+        this.frokner.volume = 0.3;
 
         if (SOUND) {
 
@@ -103,7 +103,7 @@ var play = {
             this.randomS = this.game.time.events.loop(10000, this.randomSound, this);
         }
 
-        this.dick.play();
+        this.frokner.play();
 
         this.backgroundSpeed = 0.4;
 
@@ -191,7 +191,7 @@ var play = {
             SANACOUNT = 0;
         }
 
-        this.dick.stop();
+        this.frokner.stop();
 
         TOTAL += this.score;
 

@@ -49,7 +49,7 @@ var load = {
         game.load.audio('m5', 'assets/quotes/s5.mp3');
 
 
-        game.load.audio("dick", "assets/dick.mp3");
+        game.load.audio("frokner", "assets/frokner.mp3");
 
 	},
 
