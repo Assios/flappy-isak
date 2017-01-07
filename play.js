@@ -79,13 +79,13 @@ var play = {
 
         this.player.animations.play("start");        
 
-        this.scoretext = this.game.add.text(230, 20, "POENG: 0", {
+        this.scoretext = this.game.add.text(230, 20, "POINTS: 0", {
             font: "35px Helvetica",
             fill: "#E4DF01",
             align: "center"
         });
 
-        this.besttext = this.game.add.text(210, 80, "REKORD: " + BEST, {
+        this.besttext = this.game.add.text(245, 80, "BEST: " + BEST, {
             font: "35px Helvetica",
             fill: "#E4DF01",
             align: "center"
@@ -237,10 +237,10 @@ var play = {
     },
     updateScore: function() {
         this.score += 1;
-        this.scoretext.text = "POENG: " + this.score;
+        this.scoretext.text = "POINTS: " + this.score;
         if (this.score > BEST)
             BEST = this.score;
-        this.besttext.text = "REKORD: " + BEST;
+        this.besttext.text = "BEST: " + BEST;
     },
     randomDeathSound: function() {
         switch(Math.floor((Math.random() * 4) + 1)) {

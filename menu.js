@@ -39,7 +39,7 @@ var menu = {
         this.totaltext.fontSize = "60px";
         this.totaltext.anchor.setTo(0.5, 0);
 
-        this.besttext = this.game.add.text(W/2, H-145, "REKORD: " + BEST, {
+        this.besttext = this.game.add.text(W/2, H-145, "BEST: " + BEST, {
             fontSize: "100px",
             fill: "#fff900",
             align: "center",
@@ -48,9 +48,14 @@ var menu = {
         this.besttext.font = "Helvetica";
         this.besttext.fontSize = "60px";
         this.besttext.anchor.setTo(0.5, 0);
+        this.eventext = this.game.add.text(10, H-240, "if enough players share this game i'll add even<3", {
+            fontSize: "100px",
+            fill: '#FE5C5C',
+            align: "center",
+        });
 
         if (LAST) {
-            this.lasttext = this.game.add.text(W/2, H-200, "DU FIKK " + LAST + " POENG", {
+            this.lasttext = this.game.add.text(W/2, H-200, "YOU SCORED " + LAST + " POINTS", {
                 fill: "#fff900",
                 //align: "center"
             });
